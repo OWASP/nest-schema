@@ -34,6 +34,8 @@ print(chapter_schema["title"])
 
 This package is automatically published to PyPI when schema files change in the main branch using OIDC authentication.
 
+For development setup and contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
 MIT License - see LICENSE file for details.
