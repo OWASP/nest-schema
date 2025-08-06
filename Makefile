@@ -20,14 +20,24 @@ bump-minor-commit:
 bump-patch-commit:
 	poetry run bump2version patch -commit -tag -allow-dirty
 
+check: \
+    pre-commit
+
+check-test: \
+	check \
+	test
+
 clean-package:
 	rm -rf dist/ build/ *.egg-info/
 
 clean-dependencies:
 	@rm -rf .venv
 
-install-package:
+install:
 	poetry install
+
+pre-commit:
+	@pre-commit run -a
 
 publish-package:
 	poetry publish

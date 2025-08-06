@@ -1,13 +1,13 @@
 # Contributing to OWASP Schema
 
-Thank you for considering contributing to the OWASP Schema project!
+Thank you for your interest in contributing to the OWASP Schema project - we appreciate your support!
 
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/nest-schema.git`
-4. Install dependencies: `make install-package`
-5. Run tests to ensure everything works: `make test`
+1. Clone your fork: `git clone https://github.com/your-username/nest-schema.git`
+1. Install dependencies: `make install`
+1. Run tests to ensure everything works: `make test`
 
 ## OWASP Schema Development
 
@@ -26,32 +26,37 @@ Please follow these contribution guidelines for OWASP Schema-related changes:
 
 ## Testing and Building
 
-You can run the following commands locally:
+You can run the following commands locally.
+
+This command runs code quality checks:
+
+```bash
+make check
+```
+
+This command runs all tests for the schema validation:
 
 ```bash
 make test
 ```
 
-This command runs all tests for the schema validation.
+This command installs all required dependencies:
 
 ```bash
-make install-package
+make install
 ```
 
-This command installs all required dependencies.
+This command builds the package for distribution:
 
 ```bash
-make build-package
+make build
 ```
-
-This command builds the package for distribution.
 
 ## Development Workflow
 
 1. Create a feature branch: `git checkout -b feature/your-change`
-2. Make your schema changes
-3. Add or update tests for your changes
-4. Run tests: `make test`
-5. Commit your changes with a descriptive message
-6. Push and create a pull request
-
+1. Make your schema changes
+1. Add or update tests for your changes
+1. Run tests: `make test`
+1. Commit your changes with a descriptive message
+1. Push and create a pull request
