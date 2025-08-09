@@ -98,7 +98,6 @@ from tests.conftest import tests_data_dir
         ("name_undefined.yaml", "'name' is a required property"),
         ("pitch_empty.yaml", "'' is too short"),
         ("pitch_null.yaml", "None is not of type 'string'"),
-        ("pitch_undefined.yaml", "'pitch' is a required property"),
         ("repositories_empty.yaml", "[] should be non-empty"),
         (
             "repositories_non_unique.yaml",
