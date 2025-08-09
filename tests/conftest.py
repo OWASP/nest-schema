@@ -1,5 +1,6 @@
 """OWASP Schema tests configuration."""
 
+import sys
 from pathlib import Path
 
 import pytest
@@ -13,6 +14,10 @@ from owasp_schema.utils.schema_validators import validate_data
 
 tests_dir = Path(__file__).resolve().parent
 tests_data_dir = tests_dir / "data"
+
+project_root = Path(__file__).parent.parent
+action_dir = project_root / ".github" / "actions" / "validate"
+sys.path.insert(0, str(action_dir))
 
 
 # Fixtures.
