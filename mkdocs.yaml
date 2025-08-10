@@ -1,10 +1,10 @@
-site_name: OWASP Nest Schema Documentation
+site_name: OWASP Schema Documentation
 nav:
   - Home:
       - Overview: index.md
-      - Chapter: schema/chapter.md
-      - Committee: schema/committee.md
-      - Project: schema/project.md
+      - Chapter: chapter.md
+      - Committee: committee.md
+      - Project: project.md
   - Code of Conduct: code-of-conduct.md
   - Contributing: contributing.md
 repo_url: https://github.com/OWASP/nest-schema

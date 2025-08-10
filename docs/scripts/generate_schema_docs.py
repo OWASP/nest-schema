@@ -9,8 +9,8 @@ from pathlib import Path
 
 def generate_schema_docs():
     """Generate documentation from JSON schema files."""
-    input_dir = Path(".")
-    output_dir = Path("./docs/schema")
+    input_dir = Path()
+    output_dir = Path("./docs")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     for schema_file in input_dir.iterdir():

@@ -1,3 +1,7 @@
+include docs/Makefile
+
+.PHONY: docs
+
 build-package:
 	@cp *.json src/owasp_schema/ 2>/dev/null
 	poetry build

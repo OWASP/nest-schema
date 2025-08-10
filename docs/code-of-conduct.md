@@ -19,11 +19,11 @@
 
 We encourage behaviors that contribute to a positive environment:
 
--  Demonstrating empathy and kindness toward other people
--  Being respectful of differing opinions, viewpoints, and experiences
--  Giving and gracefully accepting constructive feedback
--  Accepting responsibility and apologizing for mistakes
--  Focusing on what is best for the overall community
+- Demonstrating empathy and kindness toward other people
+- Being respectful of differing opinions, viewpoints, and experiences
+- Giving and gracefully accepting constructive feedback
+- Accepting responsibility and apologizing for mistakes
+- Focusing on what is best for the overall community
 
 ### Unacceptable Behaviors
 
@@ -81,8 +81,6 @@ Community leaders follow these impact guidelines when determining consequences:
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html), version 2.0, available at [contributor-covenant.org](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html).
-
-
 
 Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
 
