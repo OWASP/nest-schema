@@ -71,7 +71,7 @@ def test_negative(committee_schema, file_path, error_message):
         validate_data(
             committee_schema,
             yaml.safe_load(
-                Path(tests_data_dir / "committee/negative" / file_path).read_text(),
+                Path(tests_data_dir / "schema/committee/negative" / file_path).read_text(),
             ),
         )
         == error_message
@@ -79,7 +79,7 @@ def test_negative(committee_schema, file_path, error_message):
 
 
 def test_positive(committee_schema):
-    for file_path in Path(tests_data_dir / "committee/positive").rglob("*.yaml"):
+    for file_path in Path(tests_data_dir / "schema/committee/positive").rglob("*.yaml"):
         assert (
             validate_data(
                 committee_schema,
