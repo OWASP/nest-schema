@@ -16,7 +16,7 @@ SCHEMA_NAME = "person"
         ("github_empty.yaml", "'' does not match '^[a-zA-Z0-9-]{1,39}$'"),
         ("github_invalid.yaml", "'user@name' does not match '^[a-zA-Z0-9-]{1,39}$'"),
         ("github_null.yaml", "None is not of type 'string'"),
-        ("github_undefined.yaml", "'github' is a required property"),
+        ("github_undefined.yaml", "None is not of type 'string'"),
         ("name_empty.yaml", "'' is too short"),
         ("name_null.yaml", "None is not of type 'string'"),
         ("slack_empty.yaml", "'' does not match '^[a-zA-Z0-9._-]{1,21}$'"),

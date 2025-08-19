@@ -145,7 +145,7 @@
         }
       },
       "required": [
-        "github"
+        "name"
       ],
       "title": "Person",
       "type": "object"
