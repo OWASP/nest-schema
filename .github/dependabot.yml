@@ -1,0 +1,28 @@
+# .github/dependabot.yml
+# Dependabot config for owasp/nest-schema
+# Only enables updates for GitHub Actions and npm (cspell tooling)
+
+version: 2
+updates:
+  # Keep GitHub Actions up to date (e.g., actions/checkout, pnpm/action)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    branches:
+      - "main"
+    labels:
+      - "dependencies"
+
+  # Keep npm dev dependencies updated (cspell + dictionaries)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    branches:
+      - "main"
+    labels:
+      - "dependencies"
+    allow:
+      - dependency-name: "*"
+        update-types: ["semver:patch", "semver:minor"]
