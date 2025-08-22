@@ -5,8 +5,8 @@ downloads:
 name: Test Project
 level: 3
 leaders:
-  - name: User 1 Name
-  - name: User 2 Name
+  - name: John Doe
+  - name: Jane Doe
 pitch: A very brief, one-line description of your project
 tags:
   - example-tag-1
