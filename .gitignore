@@ -1,7 +1,7 @@
 __pycache__
+.DS_Store
 .mypy_cache/
+.project
 .ruff_cache/
 .venv/
 dist/
-.DS_Store
-.project
