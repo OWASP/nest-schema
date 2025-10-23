@@ -10,18 +10,20 @@ SCHEMA_NAME = "logo"
 @pytest.mark.parametrize(
     ("file_path", "error_message"),
     [
+        (
+            "invalid_property.yaml",
+            "$: Additional properties are not allowed ('xlarge' was unexpected)",
+        ),
         ("large_empty.yaml", "$.large: '' is not a 'uri'"),
         ("large_invalid.yaml", "$.large: 'image/large.png' is not a 'uri'"),
         ("large_null.yaml", "$.large: None is not of type 'string'"),
-        ("large_undefined.yaml", "$: 'large' is a required property"),
         ("medium_empty.yaml", "$.medium: '' is not a 'uri'"),
         ("medium_invalid.yaml", "$.medium: 'image/medium.png' is not a 'uri'"),
         ("medium_null.yaml", "$.medium: None is not of type 'string'"),
-        ("medium_undefined.yaml", "$: 'medium' is a required property"),
+        ("none_defined.yaml", "$: None is not of type 'object'"),
         ("small_empty.yaml", "$.small: '' is not a 'uri'"),
         ("small_invalid.yaml", "$.small: 'image/small.png' is not a 'uri'"),
         ("small_null.yaml", "$.small: None is not of type 'string'"),
-        ("small_undefined.yaml", "$: 'small' is a required property"),
     ],
 )
 def test_negative(common_schema, file_path, error_message):
