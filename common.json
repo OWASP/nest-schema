@@ -21,7 +21,9 @@
           "enum": [
             "discord",
             "github-discussions",
-            "slack"
+            "slack",
+            "matrix",
+            "reddit"
           ],
           "type": "string"
         },
@@ -277,7 +279,8 @@
             "linkedin",
             "mastodon",
             "x",
-            "youtube"
+            "youtube",
+            "facebook"
           ],
           "type": "string"
         },
