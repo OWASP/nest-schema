@@ -17,7 +17,7 @@ SCHEMA_NAME = "community"
         ("name_undefined.yaml", "$: 'name' is a required property"),
         (
             "platform_empty.yaml",
-            "$.platform: '' is not one of ['discord', 'github-discussions', 'slack', ",
+            "$.platform: '' is not one of ['discord', 'github-discussions', 'slack', "
             "'matrix', 'reddit']",
         ),
         (
