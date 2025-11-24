@@ -14,7 +14,8 @@ SCHEMA_NAME = "social_media"
         ("description_null.yaml", "$.description: None is not of type 'string'"),
         (
             "platform_empty.yaml",
-            "$.platform: '' is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube', 'facebook']",
+            "$.platform: '' is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube', "
+            "'facebook']",
         ),
         (
             "platform_invalid.yaml",
@@ -23,7 +24,8 @@ SCHEMA_NAME = "social_media"
         ),
         (
             "platform_null.yaml",
-            "$.platform: None is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube', 'facebook']",
+            "$.platform: None is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube', "
+            "'facebook']",
         ),
         ("platform_undefined.yaml", "$: 'platform' is a required property"),
         ("url_empty.yaml", "$.url: '' is not a 'uri'"),
