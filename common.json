@@ -21,9 +21,9 @@
           "enum": [
             "discord",
             "github-discussions",
-            "slack",
             "matrix",
-            "reddit"
+            "reddit",
+            "slack"
           ],
           "type": "string"
         },
@@ -276,11 +276,11 @@
           "description": "The type of social media platform.",
           "enum": [
             "bluesky",
+            "facebook",
             "linkedin",
             "mastodon",
             "x",
-            "youtube",
-            "facebook"
+            "youtube"
           ],
           "type": "string"
         },
