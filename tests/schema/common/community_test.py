@@ -17,15 +17,18 @@ SCHEMA_NAME = "community"
         ("name_undefined.yaml", "$: 'name' is a required property"),
         (
             "platform_empty.yaml",
-            "$.platform: '' is not one of ['discord', 'github-discussions', 'slack']",
+            "$.platform: '' is not one of ['discord', 'github-discussions', 'matrix', "
+            "'reddit', 'slack']",
         ),
         (
             "platform_invalid.yaml",
-            "$.platform: 'telegram' is not one of ['discord', 'github-discussions', 'slack']",
+            "$.platform: 'telegram' is not one of ['discord', 'github-discussions', 'matrix', "
+            "'reddit', 'slack']",
         ),
         (
             "platform_null.yaml",
-            "$.platform: None is not one of ['discord', 'github-discussions', 'slack']",
+            "$.platform: None is not one of ['discord', 'github-discussions', 'matrix', "
+            "'reddit', 'slack']",
         ),
         ("platform_undefined.yaml", "$: 'platform' is a required property"),
         ("url_empty.yaml", "$.url: '' is not a 'uri'"),
