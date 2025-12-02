@@ -5,7 +5,7 @@ requires = [ "poetry-core" ]
 
 [tool.poetry]
 name = "owasp-schema"
-version = "0.1.46"
+version = "0.1.47"
 description = "A collection of OWASP schemas"
 authors = [ "Arkadii Yakovets <arkadii.yakovets@owasp.org>" ]
 license = "MIT"
