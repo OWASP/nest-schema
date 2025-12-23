@@ -11,7 +11,7 @@ authors = [ "Arkadii Yakovets <arkadii.yakovets@owasp.org>" ]
 license = "MIT"
 readme = "README.md"
 homepage = "https://nest.owasp.org"
-repository = "https://github.com/OWASP/owasp-schema"
+repository = "https://github.com/OWASP/nest-schema"
 keywords = [ "owasp", "schema", "json-schema" ]
 classifiers = [
   "Development Status :: 4 - Beta",
