@@ -7,22 +7,13 @@ build-package:
 	poetry build
 
 bump-major:
-	poetry run bump2version major -allow-dirty
+	poetry run bump2version major --allow-dirty
 
 bump-minor:
-	poetry run bump2version minor -allow-dirty
+	poetry run bump2version minor --allow-dirty
 
 bump-patch:
-	poetry run bump2version patch -allow-dirty
-
-bump-major-commit:
-	poetry run bump2version major -commit -tag -allow-dirty
-
-bump-minor-commit:
-	poetry run bump2version minor -commit -tag -allow-dirty
-
-bump-patch-commit:
-	poetry run bump2version patch -commit -tag -allow-dirty
+	poetry run bump2version patch --allow-dirty
 
 check: \
     pre-commit

@@ -8,11 +8,13 @@ on:
   push:
     branches:
       - main
+  release:
+    types:
+      - published
   workflow_dispatch:
 
 permissions:
-  contents: write
-  id-token: write
+  contents: read
 
 concurrency:
   cancel-in-progress: true
@@ -112,8 +114,11 @@ jobs:
     needs:
       - code-ql
       - run-tests
+    permissions:
+      contents: read
+      id-token: write
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'release'
     steps:
       - name: Check out repository
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
@@ -128,53 +133,25 @@ jobs:
       - name: Install Poetry
         run: pipx install poetry
 
+      - name: Validate version matches tag
+        run: |
+          TAG_VERSION="${{ github.event.release.tag_name }}"
+          TAG_VERSION="${TAG_VERSION#v}"
+          PACKAGE_VERSION=$(poetry version --short)
+
+          if [ "$TAG_VERSION" != "$PACKAGE_VERSION" ]; then
+            echo "::error::Version mismatch: tag is '$TAG_VERSION' but pyproject.toml has '$PACKAGE_VERSION'"
+            exit 1
+          fi
+          echo "Version validated: $PACKAGE_VERSION"
+
       - name: Install dependencies
-        run: |
-          poetry install
+        run: poetry install
 
-      - name: Configure Git
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
-      - name: Bump version
-        id: bump-version
-        run: |
-          poetry run bump2version patch --commit --tag --allow-dirty
-          echo "tag_name=$(poetry version --short)" >> $GITHUB_OUTPUT
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Push changes
-        run: |
-          git push
-          git push --tags
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build with new version
-        run: |
-          make build-package
+      - name: Build package
+        run: make build-package
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e
         with:
           skip-existing: true
-
-      - name: Create GitHub Release
-        uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.bump-version.outputs.tag_name }}
-          release_name: OWASP Schema v${{ steps.bump-version.outputs.tag_name }}
-          body: |
-            Automated release for OWASP package.
-
-            Changes in this release:
-            - Updated files
-            - Automated build and publish
-
-            Package: https://pypi.org/project/owasp-schema/
-          draft: false
-          prerelease: false

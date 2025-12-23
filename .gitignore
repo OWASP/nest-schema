@@ -1,7 +1,12 @@
 __pycache__
+.cursor/rules/snyk_rules.mdc
 .DS_Store
+.github/instructions/snyk_rules.instructions.md
 .mypy_cache/
 .project
 .ruff_cache/
 .venv/
+*.egg-info/
+build/
 dist/
+src/owasp_schema/*.json
