@@ -23,6 +23,15 @@
       "pattern": "^[A-Z]{3}$",
       "type": "string"
     },
+    "event_platforms": {
+      "description": "Event platforms (e.g., connpass, Meetup) where the chapter organizes its meetings.",
+      "items": {
+        "$ref": "common.json#/definitions/event_platform"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
     "events": {
       "description": "Events related to the project.",
       "items": {

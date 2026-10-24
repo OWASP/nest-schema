@@ -9,6 +9,12 @@ community:
     platform: discord
     url: https://discord.com/example
 currency: INR
+event_platforms:
+  - description: OWASP chapter group on connpass.
+    platform: connpass
+    url: https://example.connpass.com
+  - platform: meetup
+    url: https://www.meetup.com/example
 events:
   - description: OWASP event description
     title: OWASP Event

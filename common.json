@@ -67,6 +67,38 @@
       "title": "Event",
       "type": "object"
     },
+    "event_platform": {
+      "additionalProperties": false,
+      "description": "An event platform used to organize meetings",
+      "properties": {
+        "description": {
+          "description": "A brief description of the event platform group.",
+          "minLength": 10,
+          "type": "string"
+        },
+        "platform": {
+          "description": "The type of event platform.",
+          "enum": [
+            "connpass",
+            "eventbrite",
+            "luma",
+            "meetup"
+          ],
+          "type": "string"
+        },
+        "url": {
+          "description": "The URL of the group on the event platform.",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "platform",
+        "url"
+      ],
+      "title": "Event platform",
+      "type": "object"
+    },
     "location": {
       "additionalProperties": false,
       "description": "A geographic location",
