@@ -26,6 +26,14 @@ from tests.conftest import tests_data_dir
         ("currency_empty.yaml", "$.currency: '' does not match '^[A-Z]{3}$'"),
         ("currency_invalid_length.yaml", "$.currency: 'US' does not match '^[A-Z]{3}$'"),
         ("currency_invalid_lowercase.yaml", "$.currency: 'usd' does not match '^[A-Z]{3}$'"),
+        ("event_platforms_empty.yaml", "$.event_platforms: [] should be non-empty"),
+        (
+            "event_platforms_non_unique.yaml",
+            "$.event_platforms: [{'platform': 'connpass', 'url': 'https://example.connpass.com'}, "
+            "{'platform': 'connpass', 'url': 'https://example.connpass.com'}] "
+            "has non-unique elements",
+        ),
+        ("event_platforms_null.yaml", "$.event_platforms: None is not of type 'array'"),
         ("events_empty.yaml", "$.events: [] should be non-empty"),
         (
             "events_non_unique.yaml",
