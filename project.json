@@ -190,13 +190,8 @@
       "uniqueItems": true
     },
     "tags": {
-      "description": "Tags for the project",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 3,
-      "type": "array",
-      "uniqueItems": true
+      "$ref": "common.json#/definitions/tags",
+      "description": "Tags for the project"
     },
     "type": {
       "description": "The type of the project: code, documentation or tool.",

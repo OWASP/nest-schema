@@ -102,13 +102,8 @@
       "uniqueItems": true
     },
     "tags": {
-      "description": "Tags for the chapter",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 3,
-      "type": "array",
-      "uniqueItems": true
+      "$ref": "common.json#/definitions/tags",
+      "description": "Tags for the chapter"
     },
     "website": {
       "description": "The official website of the chapter.",
