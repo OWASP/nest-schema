@@ -186,13 +186,8 @@
       "type": "array"
     },
     "tags": {
-      "description": "Tags associated with the committee",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 3,
-      "type": "array",
-      "uniqueItems": true
+      "$ref": "common.json#/definitions/tags",
+      "description": "Tags associated with the committee"
     },
     "website": {
       "description": "The official website of the committee.",

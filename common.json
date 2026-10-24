@@ -328,6 +328,16 @@
       ],
       "title": "Sponsor",
       "type": "object"
+    },
+    "tags": {
+      "description": "A list of tags",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "title": "Tags",
+      "type": "array",
+      "uniqueItems": true
     }
   }
 }
