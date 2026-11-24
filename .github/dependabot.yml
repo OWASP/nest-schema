@@ -2,18 +2,36 @@ version: 2
 updates:
   - package-ecosystem: docker
     directory: /docker
+    groups:
+      version-updates:
+        applies-to: version-updates
+        patterns:
+          - '*'
     schedule:
-      interval: daily
+      day: thursday
+      interval: weekly
     target-branch: main
 
   - package-ecosystem: github-actions
     directory: /
+    groups:
+      version-updates:
+        applies-to: version-updates
+        patterns:
+          - '*'
     schedule:
-      interval: daily
+      day: thursday
+      interval: weekly
     target-branch: main
 
   - package-ecosystem: pip
     directory: /schema
+    groups:
+      version-updates:
+        applies-to: version-updates
+        patterns:
+          - '*'
     schedule:
-      interval: daily
+      day: thursday
+      interval: weekly
     target-branch: main
